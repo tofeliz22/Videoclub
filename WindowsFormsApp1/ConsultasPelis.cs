@@ -32,8 +32,9 @@ namespace WindowsFormsApp1
 
         private void button1_MouseClick(object sender, MouseEventArgs e)
         {
-            listaDatos.DataSource = default;
+            listaDatos.DataSource = null;
             listaDatos.Rows.Clear();
+            
             
 
             if (desplegable.Text == "año")
@@ -93,9 +94,10 @@ namespace WindowsFormsApp1
                 lector = buscador.Text;
                 
                 MySqlConnection conexion = new ConexionBBDD().conecta();
-                MySqlCommand comando = new MySqlCommand("select movies.name, movies.year " +
+                MySqlCommand comando = new MySqlCommand("select movies.name, " +
                     "from movies " +
-                    "where movies.year =  " + lector, conexion);
+                    "where movies.name like '% " + lector + "%' and movies.year != '0' "
+                    , conexion);
 
                 MySqlDataReader resultados = comando.ExecuteReader();
 
