@@ -48,6 +48,7 @@ namespace WindowsFormsApp1
 
                 MySqlDataReader resultados = comando.ExecuteReader();
 
+                datos.Clear();
                 datos.Load(resultados);
                 listaDatos.DataSource = datos;
 
@@ -68,6 +69,7 @@ namespace WindowsFormsApp1
 
                 MySqlDataReader resultados = comando.ExecuteReader();
 
+                datos.Clear();
                 datos.Load(resultados);
                 listaDatos.DataSource = datos;
 
@@ -84,6 +86,7 @@ namespace WindowsFormsApp1
 
                 MySqlDataReader resultados = comando.ExecuteReader();
 
+                datos.Clear();
                 datos.Load(resultados);
                 listaDatos.DataSource = datos;
 
@@ -101,6 +104,7 @@ namespace WindowsFormsApp1
 
                 MySqlDataReader resultados = comando.ExecuteReader();
 
+                datos.Clear();
                 datos.Load(resultados);
                 listaDatos.DataSource = datos;
 
