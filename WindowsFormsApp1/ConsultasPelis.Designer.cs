@@ -90,6 +90,7 @@
             this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "estado";
+            this.label1.UseWaitCursor = true;
             // 
             // label2
             // 
@@ -99,6 +100,7 @@
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "cliente";
+            this.label2.UseWaitCursor = true;
             // 
             // textBox1
             // 
@@ -106,6 +108,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 7;
+            this.textBox1.UseWaitCursor = true;
             // 
             // textBox2
             // 
@@ -113,6 +116,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 8;
+            this.textBox2.UseWaitCursor = true;
             // 
             // button2
             // 
@@ -123,6 +127,7 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "reservar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.UseWaitCursor = true;
             // 
             // button3
             // 
@@ -146,12 +151,14 @@
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.groupBox1.Location = new System.Drawing.Point(589, 102);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(240, 265);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "datos reserva";
+            this.groupBox1.UseWaitCursor = true;
             // 
             // ConsultasPelis
             // 
@@ -165,11 +172,10 @@
             this.Controls.Add(this.listaDatos);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buscador);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "ConsultasPelis";
-            this.Opacity = 0.1D;
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "ConsultasPelis";
-            this.UseWaitCursor = true;
             ((System.ComponentModel.ISupportInitialize)(this.listaDatos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
