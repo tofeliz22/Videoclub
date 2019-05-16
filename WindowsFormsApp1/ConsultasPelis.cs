@@ -34,13 +34,13 @@ namespace WindowsFormsApp1
         {
             listaDatos.DataSource = null;
             listaDatos.Rows.Clear();
-            
-            
+
+
 
             if (desplegable.Text == "año")
             {
                 lector = buscador.Text;
-              
+
                 MySqlConnection conexion = new ConexionBBDD().conecta();
                 MySqlCommand comando = new MySqlCommand("select movies.name, movies.year, movies.rank " +
                     "from movies " +
@@ -57,14 +57,14 @@ namespace WindowsFormsApp1
             if (desplegable.Text == "autor")
             {
                 lector = buscador.Text;
-                
+
                 MySqlConnection conexion = new ConexionBBDD().conecta();
                 MySqlCommand comando = new MySqlCommand("select directors.id, directors.first_name, directors.last_name, movies.name as 'pelicula', movies.year " +
                     "from directors, movies, movies_directors " +
-                    "where directors.first_name like  '%" + lector + 
+                    "where directors.first_name like  '%" + lector +
                     " %' or directors.last_name like '%" + lector + "%' and directors.id = movies_directors.director_id" +
                     " and movies_directors.movie_id = movies.id"
-              
+
                     , conexion);
 
                 MySqlDataReader resultados = comando.ExecuteReader();
@@ -78,7 +78,7 @@ namespace WindowsFormsApp1
             if (desplegable.Text == "genero")
             {
                 lector = buscador.Text;
-               
+
                 MySqlConnection conexion = new ConexionBBDD().conecta();
                 MySqlCommand comando = new MySqlCommand("select movies.name, movies.year " +
                     "from movies " +
@@ -95,7 +95,7 @@ namespace WindowsFormsApp1
             if (desplegable.Text == "titulo")
             {
                 lector = buscador.Text;
-                
+
                 MySqlConnection conexion = new ConexionBBDD().conecta();
                 MySqlCommand comando = new MySqlCommand("select movies.name, " +
                     "from movies " +
@@ -111,5 +111,14 @@ namespace WindowsFormsApp1
                 conexion.Close();
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            NuevoCliente ventana = new NuevoCliente();
+            ventana.Visible = true;
+        }
     }
 }
+
+        
+

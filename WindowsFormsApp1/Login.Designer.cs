@@ -40,12 +40,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(164, 233);
+            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button1.Location = new System.Drawing.Point(146, 231);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 27);
             this.button1.TabIndex = 0;
             this.button1.Text = "Entrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
             // 
             // textBox1
@@ -83,9 +84,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(103, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(102, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(267, 86);
+            this.pictureBox1.Size = new System.Drawing.Size(288, 57);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -95,6 +96,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(456, 307);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
