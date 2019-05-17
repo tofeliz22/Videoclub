@@ -49,7 +49,6 @@
             this.buscador.Name = "buscador";
             this.buscador.Size = new System.Drawing.Size(395, 20);
             this.buscador.TabIndex = 0;
-            this.buscador.UseWaitCursor = true;
             // 
             // button1
             // 
@@ -60,7 +59,6 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.UseWaitCursor = true;
             this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
             // 
             // listaDatos
@@ -71,16 +69,15 @@
             this.listaDatos.Name = "listaDatos";
             this.listaDatos.Size = new System.Drawing.Size(490, 266);
             this.listaDatos.TabIndex = 3;
-            this.listaDatos.UseWaitCursor = true;
             // 
             // desplegable
             // 
+            this.desplegable.Cursor = System.Windows.Forms.Cursors.Default;
             this.desplegable.FormattingEnabled = true;
             this.desplegable.Location = new System.Drawing.Point(12, 51);
             this.desplegable.Name = "desplegable";
             this.desplegable.Size = new System.Drawing.Size(285, 21);
             this.desplegable.TabIndex = 4;
-            this.desplegable.UseWaitCursor = true;
             // 
             // label1
             // 
@@ -90,7 +87,6 @@
             this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "estado";
-            this.label1.UseWaitCursor = true;
             // 
             // label2
             // 
@@ -100,7 +96,6 @@
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "cliente";
-            this.label2.UseWaitCursor = true;
             // 
             // textBox1
             // 
@@ -108,7 +103,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 7;
-            this.textBox1.UseWaitCursor = true;
             // 
             // textBox2
             // 
@@ -116,7 +110,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 8;
-            this.textBox2.UseWaitCursor = true;
             // 
             // button2
             // 
@@ -127,7 +120,6 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "reservar";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.UseWaitCursor = true;
             // 
             // button3
             // 
@@ -137,7 +129,6 @@
             this.button3.TabIndex = 10;
             this.button3.Text = "dar de alta un nuevo cliente";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.UseWaitCursor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox1
@@ -151,14 +142,13 @@
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.groupBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.groupBox1.Location = new System.Drawing.Point(589, 102);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(240, 265);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "datos reserva";
-            this.groupBox1.UseWaitCursor = true;
             // 
             // ConsultasPelis
             // 
