@@ -71,9 +71,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(47, 282);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 13);
+            this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "telefono";
+            this.label4.Text = "email";
             // 
             // textBox1
             // 
@@ -112,6 +112,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "crear nuevo cliente";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // NuevoCliente
             // 

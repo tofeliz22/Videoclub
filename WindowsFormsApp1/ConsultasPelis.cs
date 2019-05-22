@@ -42,7 +42,7 @@ namespace WindowsFormsApp1
                 lector = buscador.Text;
 
                 MySqlConnection conexion = new ConexionBBDD().conecta();
-                MySqlCommand comando = new MySqlCommand("select movies.name, movies.year, movies.rank " +
+                MySqlCommand comando = new MySqlCommand("select movies.id, movies.name, movies.year, movies.rank " +
                     "from movies " +
                     "where movies.year = " + lector, conexion);
 
@@ -59,7 +59,7 @@ namespace WindowsFormsApp1
                 lector = buscador.Text;
 
                 MySqlConnection conexion = new ConexionBBDD().conecta();
-                MySqlCommand comando = new MySqlCommand("select directors.id, directors.first_name, directors.last_name, movies.name as 'pelicula', movies.year " +
+                MySqlCommand comando = new MySqlCommand("select movie.id, directors.id, directors.first_name, directors.last_name, movies.name as 'pelicula', movies.year " +
                     "from directors, movies, movies_directors " +
                     "where directors.first_name like  '%" + lector +
                     " %' or directors.last_name like '%" + lector + "%' and directors.id = movies_directors.director_id" +
@@ -80,7 +80,7 @@ namespace WindowsFormsApp1
                 lector = buscador.Text;
 
                 MySqlConnection conexion = new ConexionBBDD().conecta();
-                MySqlCommand comando = new MySqlCommand("select movies.name, movies.year " +
+                MySqlCommand comando = new MySqlCommand("select movie.id, movies.name, movies.year " +
                     "from movies " +
                     "where movies.year =  " + lector, conexion);
 
@@ -97,7 +97,7 @@ namespace WindowsFormsApp1
                 lector = buscador.Text;
 
                 MySqlConnection conexion = new ConexionBBDD().conecta();
-                MySqlCommand comando = new MySqlCommand("select movies.name, " +
+                MySqlCommand comando = new MySqlCommand("select movie.id, movies.name, " +
                     "from movies " +
                     "where movies.name like '% " + lector + "%' and movies.year != '0' "
                     , conexion);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,27 @@ namespace WindowsFormsApp1
         public NuevoCliente()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conexion = new ConexionBBDD().conecta();
+            MySqlCommand comando = new MySqlCommand("INSERT INTO `usuario` (`DNI`, `Nombre`, `Apellido`, `password`, `email`)" +
+                " VALUES ('" + textBox3.Text + "', '" + textBox1.Text + "', '" + textBox2.Text + "', '0', '" + textBox4.Text + "');", conexion
+                );
+
+            MySqlDataReader resultado = comando.ExecuteReader();
+
+            if (resultado.Read())
+            {
+                MessageBox.Show("usuario guardado correctamente!");
+                this.Visible = false;
+               
+            }
+            else
+            {
+                MessageBox.Show("ERROR");
+            }
         }
     }
 }
