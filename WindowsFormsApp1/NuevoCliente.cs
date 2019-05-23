@@ -22,21 +22,19 @@ namespace WindowsFormsApp1
         {
             MySqlConnection conexion = new ConexionBBDD().conecta();
             MySqlCommand comando = new MySqlCommand("INSERT INTO `usuario` (`DNI`, `Nombre`, `Apellido`, `password`, `email`)" +
-                " VALUES ('" + textBox3.Text + "', '" + textBox1.Text + "', '" + textBox2.Text + "', '0', '" + textBox4.Text + "');", conexion
+                " VALUES ('" + textBox3.Text + "', '" + textBox1.Text + "', '" + textBox2.Text + "', '0', '" + textBox4.Text + "' ;", conexion
                 );
 
             MySqlDataReader resultado = comando.ExecuteReader();
 
-            if (resultado.Read())
-            {
-                MessageBox.Show("usuario guardado correctamente!");
+            MessageBox.Show("usuario guardado correctamente!");
                 this.Visible = false;
-               
-            }
-            else
-            {
-                MessageBox.Show("ERROR");
-            }
+
+           
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
         }
     }
 }
