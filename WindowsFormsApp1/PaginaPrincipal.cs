@@ -23,5 +23,11 @@ namespace WindowsFormsApp1
             ConsultasPelis ventana = new ConsultasPelis();
             ventana.Visible = true;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            consulta_reservas ventana = new consulta_reservas();
+            ventana.Visible = true;
+        }
     }
 }

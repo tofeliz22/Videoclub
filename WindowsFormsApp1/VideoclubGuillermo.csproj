@@ -65,6 +65,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConexionBBDD.cs" />
+    <Compile Include="consulta reservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consulta reservas.Designer.cs">
+      <DependentUpon>consulta reservas.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultasPelis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="consulta reservas.resx">
+      <DependentUpon>consulta reservas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultasPelis.resx">
       <DependentUpon>ConsultasPelis.cs</DependentUpon>
     </EmbeddedResource>
