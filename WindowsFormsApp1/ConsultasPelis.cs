@@ -118,7 +118,7 @@ namespace WindowsFormsApp1
                 MySqlConnection conexion = new ConexionBBDD().conecta();
                 MySqlCommand comando = new MySqlCommand("select movie.id, movies.name, " +
                     "from movies " +
-                    "where movies.name like '% " + lector + "%' and movies.year != '0' "
+                    "where movies.name like '% " + lector + "%'"
                     , conexion);
 
                 MySqlDataReader resultados = comando.ExecuteReader();
@@ -142,18 +142,21 @@ namespace WindowsFormsApp1
 
         private void button2_MouseClick(object sender, MouseEventArgs e)
         {
+
+            string fecha = dateTimePicker1.Value.ToString("yyyy/MM/dd");
             MySqlConnection conexion = new ConexionBBDD().conecta();
             MySqlCommand comando = new MySqlCommand("INSERT INTO `prestamos` (`usuario`, `id_movie`, `titulo`, `fecha`) " +
-                "VALUES ('"+ comboBox1.Text +"', '"+ textBox2.Text +"', 'select movies.name from movies where movies.id = " + textBox2 +")', '2019-05-23');", conexion
+                "VALUES ('"+ comboBox1.Text +"', '"+ textBox2.Text +"', '"+ textBox1.Text +"', '"+ fecha +"');", conexion
                 );
+         
 
             MySqlDataReader resultado = comando.ExecuteReader();
 
             MessageBox.Show("reserva registrada correctamente!");
-            
 
 
-            
+
+            textBox1.Clear();
             textBox2.Clear();
         }
 

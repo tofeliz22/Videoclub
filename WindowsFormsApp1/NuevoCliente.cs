@@ -21,8 +21,9 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             MySqlConnection conexion = new ConexionBBDD().conecta();
-            MySqlCommand comando = new MySqlCommand("INSERT INTO `usuario` (`DNI`, `Nombre`, `Apellido`, `password`, `email`)" +
-                " VALUES ('" + textBox3.Text + "', '" + textBox1.Text + "', '" + textBox2.Text + "', '0', '" + textBox4.Text + "' ;", conexion
+            MySqlCommand comando = new MySqlCommand("INSERT INTO `usuario`" +
+                " (`DNI`, `Nombre`, `Apellido`, `password`, `email`)" +
+                " VALUES ('" + textBox3.Text + "', '" + textBox1.Text + "', '" + textBox2.Text + "', '0', '" + textBox4.Text + "' );", conexion
                 );
 
             MySqlDataReader resultado = comando.ExecuteReader();
